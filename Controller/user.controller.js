@@ -1,7 +1,8 @@
 const mongoose = require('mongoose');
 const userModel = require('../models/user')
 const {validationResult} = require('express-validator');
-const userservice = require('../Services/user.service')
+const userservice = require('../Services/user.service');
+const authmiddleware = require("../Middleware/auth.middleware")
 
 module.exports.registeruser = async(req, res) =>{
     const errors = validationResult(req)
@@ -60,4 +61,8 @@ module.exports.userlogin = async(req, res) =>{
 
    const token = user.generateAuthToken();
    return res.status(200).json({token, user});
+}
+
+module.exports.userprofile = async (req,res) =>{
+    return res.status(201).json(req.user);
 }

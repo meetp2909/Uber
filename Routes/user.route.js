@@ -2,7 +2,7 @@ const express = require("express");
 const router = express.Router();
 const { body } = require("express-validator")
 const usercontroller = require("../Controller/user.controller");
-
+const authmiddleware = require("../Middleware/auth.middleware");
 
 router.post('/register', [
     body('email').isEmail().withMessage("Invalid Email"),
@@ -17,5 +17,5 @@ router.post('/login',[
     body('password').isLength({min:8}).withMessage("Password must be 8 character please")
 ], usercontroller.userlogin)
 
-
+router.get('/profile', authmiddleware.authuser, usercontroller.userprofile )
 module.exports = router;    
