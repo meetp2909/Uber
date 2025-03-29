@@ -73,12 +73,12 @@ CREATING ROUTE FOR FECTHING AN USER
 ## `user/profile`   END POINT
 
 ## REQUEST BODY
-The request should contain authorization token in header 
+The request should contain authorization token in header:-
 
 -`Authroization: bearer <token>`
 
 
-## RESPONSE DATA 
+## RESPONSE DATA:-
 
 -`message: User logout succesfully`
 
