@@ -61,5 +61,28 @@ The request body should contain email, password:-
 -`password`(string):User's password (minimum 6 character).
 
 
+------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+## DESCRIPTION
+CREATING ROUTE FOR FECTHING AN USER
+
+### HTTP METHODS
+`GET`
+
+## `user/profile`   END POINT
+
+## REQUEST BODY
+The request should contain authorization token in header 
+
+-`Authroization: bearer <token>`
+
+
+## RESPONSE DATA 
+
+-`message: User logout succesfully`
+
+
+
 
 
