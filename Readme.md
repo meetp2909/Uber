@@ -72,7 +72,7 @@ CREATING ROUTE FOR FECTHING AN USER
 
 ## `user/profile`   END POINT
 
-## REQUEST BODY
+## REQUEST BODY:-
 The request should contain authorization token in header:-
 
 -`Authroization: bearer <token>`
