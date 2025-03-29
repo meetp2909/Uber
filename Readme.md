@@ -7,7 +7,6 @@
 REGISTER A NEW USER BY CREATING A NEW ACCOUNT
 
 ### HTTP METHOD
-
 `POST`
 
 ##  `user/register` ENDPOINT
@@ -33,3 +32,33 @@ The request body should be in  JSON format and also include fields like:-
 -`password`(string):User's password (minimum 6 character).
 
 -`token`(String): JWT Token.
+
+-----------------------------------------------------------------------------------------------------------------------------------------------------------
+
+## DESCRIPTION
+CREATING ROUTE FOR LOGIN AN USER
+
+### HTTP METHODS
+`POST`
+
+## `user/login` END POINT
+
+## REQUEST BODY
+The request body should contain email, password 
+-`email`(string required): User's email address (must be a valid email).
+-`password`(string required): User's password (must be 6 characters).
+
+
+
+## RESPONSE DATA
+
+- `user`(object):
+ - `fullname`(object):
+   -`firstname`(string): User's first name (minimum 3 character). 
+   -`lastname`(string): User's lastname (minimum 3 charcter).
+-`email`(string): User's email address (must be a valid email).
+-`password`(string):User's password (minimum 6 character).
+
+
+
+
