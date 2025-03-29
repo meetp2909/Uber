@@ -25,11 +25,14 @@ const userSchema = new mongoose.Schema({
             type:String,
             select:false,
             minlength:[8, "Password must be more than 8 letters and use unique character"]
-        },   
+        },
+        socketId:{
+            type: String
+        }   
 })
 
 userSchema.methods.generateAuthToken =  function (){
-    const token = jwt.sign({_id: this._id}, process.env.JWT_SECRET)
+    const token = jwt.sign({_id: this._id}, process.env.JWT_SECRET,{expiresIn: '24h'})
     return token;
 }
 
