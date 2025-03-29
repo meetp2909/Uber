@@ -44,7 +44,8 @@ CREATING ROUTE FOR LOGIN AN USER
 ## `user/login` END POINT
 
 ## REQUEST BODY
-The request body should contain email, password 
+The request body should contain email, password:- 
+
 -`email`(string required): User's email address (must be a valid email).
 -`password`(string required): User's password (must be 6 characters).
 
